@@ -24,10 +24,6 @@ const (
 func WhereBuild(where map[string]interface{}) (whereSQL string, vals []interface{}, err error) {
 	for k, v := range where {
 		ks := strings.Split(k, " ")
-		//if len(ks) > 3 {
-		//	return "", nil, fmt.Errorf("Error in query condition: %s. ", k)
-		//}
-
 		if whereSQL != "" {
 			whereSQL += " AND "
 		}
